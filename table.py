@@ -15,7 +15,22 @@
 #
 # Using data from:
 # <http://www.cis.rit.edu/research/mcsl2/online/munsell_data/all.dat>
+'''
+The Munsell dictionary is keyed by the Munsell specification (HVC) and returns the CIE xyY 
+value where x and y define the hue in a two-dimensional plane and Y is the 
+luminance. (The xyY variables are derived from CIE XYZ.)
 
+Key: H V C
+Value: x y Y
+
+H Hue
+V Value (lightness)
+C Chroma (color purity)
+
+x Chrominance
+y Chrominance
+Y Luminance
+'''
 table = {
  '10B 0.2 2': [0.133, 0.149, 0.237],
  '10B 0.2 4': [0.088, 0.102, 0.237],

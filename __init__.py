@@ -102,11 +102,11 @@ class NotInTableError(Exception):
 class MunsellColor(object):
     '''
     This object represents a color from the Munsell color system [1].
-    It stores 3 values:  the hue, value and chroma.
+    It stores three values: the hue, value and chroma.
 
     The hue should be formatted as 'stepPRINCIPAL', eg. '5R' or '8PB'.
     Step is a float from 0 to 10.  The value ranges from 0 (black) to
-    10 (white).  Chroma represents the purtity of the colour.  It is
+    10 (white). Chroma represents the purity of the color. It is
     also a float.
 
     Example Usage
@@ -204,7 +204,7 @@ class MunsellColor(object):
                       a, b in zip(a.to_rgb(), b.to_rgb())]), total_diff
 
     def _interpolate_rgb(self, a, b, ad, bd):
-        # Oppisite of the percentage of the difference, so flip a
+        # Opposite of the percentage of the difference, so flip a
         # and b around
         if ad + bd == 0:
             return tuple([a * 0.5 + b * 0.5 for a, b in zip(a, b)]), 0
